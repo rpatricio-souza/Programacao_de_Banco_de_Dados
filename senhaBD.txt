@@ -1,0 +1,3 @@
+Executar linha de Comandos SQL
+connect system
+senha: fatec
