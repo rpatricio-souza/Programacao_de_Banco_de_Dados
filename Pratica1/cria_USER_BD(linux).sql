@@ -1,5 +1,5 @@
 CREATE TABLESPACE  TS_BD
-DATAFILE  '/mnt/14F60716F606F82E/Docs/Fatec/Programacao_de_Banco_de_Dados/BD/TS_BD.dbf' SIZE 1M 
+DATAFILE  '/mnt/14F60716F606F82E/Docs/Fatec/Programacao_de_Banco_de_Dados/BD/TS_BD_LINUX.dbf' SIZE 1M 
 AUTOEXTEND ON;
 
 CREATE USER USER_BD
