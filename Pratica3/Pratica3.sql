@@ -110,9 +110,18 @@ where anopublicacao=(select min(anopublicacao) from livro);
 
 /*12. Exibir o nome da pessoa que mais emprestou livro na biblioteca.*/
 select p.pes_nome, count(*) "Qtd de empréstimos"
-from pessoa p natural join aluno a natural join emprestimo e
+from pessoa p natural join emprestimo e
 group by p.pes_nome
-having count(*)=(select max(count(*)) from aluno natural join emprestimo group by pes_cod);
+having count(*)=(select max(count(pes_cod)) from pessoa join emprestimo using(pes_cod) group by pes_cod);
+
+--Resposta correta:
+select p.pes_cod, p.pes_nome, count(*)Quant
+from pessoa p, emprestimo e
+where p.pes_cod=e.pes_cod
+group by p.pes_cod, p.pes_nome
+having count(*)= (select max(count(p.pes_cod)) from emprestimo e, pessoa p
+where p.pes_cod=e.pes_cod
+group by p.pes_cod);
 
 
 /*13. Listar a quantidade de exemplares por livro.*/
