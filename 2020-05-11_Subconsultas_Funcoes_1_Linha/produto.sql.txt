@@ -1,0 +1,12 @@
+CREATE TABLE produto (
+       pro_codigo           NUMBER NOT NULL,
+       prod_descricao       VARCHAR2(10) NULL,
+       pro_quantidade       NUMBER NULL,
+       pro_valor_unidade    NUMBER(10,2) NULL,
+       PRIMARY KEY (pro_codigo)
+);
+
+
+insert into produto values (1,'cANETA',1.00,100);
+insert into produto values (2,'APONTADOR',4.00,400);
+insert into produto values (3,'REGUA',5.00,600);
