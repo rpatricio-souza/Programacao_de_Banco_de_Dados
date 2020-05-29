@@ -82,5 +82,10 @@ select mus_nome, faixa_numero, cd_nome
 from musica join faixa using(mus_codigo) join cd using(cd_codigo)
 where cd_codigo=102 or cd_codigo=103;
 
---16. Listar (um único resultado) os autores (código autor, nome autor) com código menor que 10 e as músicas (código musica, nome musica) com código menor que 15. (Utilizarem UNION).
-
+--16. Listar (um único resultado) os autores (código autor, nome autor) com código menor que 10 e as músicas
+-- (código musica, nome musica) com código menor que 15. (Utilizarem UNION).
+select aut_codigo "Codigos", aut_nome "Autor/Musica" from autor
+where aut_codigo<10
+union
+select mus_codigo, mus_nome from musica
+where mus_codigo<15;
