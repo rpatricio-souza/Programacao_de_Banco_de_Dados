@@ -1,0 +1,23 @@
+---------------------
+-- CRIA TABLESPACE --
+---------------------
+
+CREATE TABLESPACE TS_LIVRARIA
+DATAFILE  'D:\Docs\Fatec\Programacao_de_Banco_de_Dados\Projeto\TS_LIVRARIA.dbf' SIZE 1M
+AUTOEXTEND ON;
+
+------------------
+-- CRIA USUÁRIO --
+------------------
+
+CREATE USER PROJETO_LIVRARIA
+IDENTIFIED BY aluno
+DEFAULT TABLESPACE TS_LIVRARIA
+TEMPORARY TABLESPACE TEMP
+QUOTA UNLIMITED ON TS_LIVRARIA;
+
+-----------------
+-- PRIVILÉGIOS --
+-----------------
+
+GRANT DBA TO PROJETO_LIVRARIA WITH ADMIN OPTION;
