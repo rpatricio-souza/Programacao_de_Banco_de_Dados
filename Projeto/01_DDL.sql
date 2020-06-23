@@ -102,3 +102,8 @@ create table ofe_oferta(
     constraint ofe_exe_fk foreign key (exe_id, liv_isbn) references exe_exemplar(exe_id, liv_isbn)
 );
 --drop table ofe_oferta;
+
+--View criada para visualizar os exemplares relacionados as vendas
+create view exv_exemplar_vendido as
+select ven_id, exe_id
+from exe_exemplar join ven_venda using(ven_id);
