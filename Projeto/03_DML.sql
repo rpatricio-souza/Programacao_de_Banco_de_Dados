@@ -12,6 +12,7 @@ insert into exe_exemplar values(8581050395,exe_id_seq.nextval,424,'Português','B
 
 update exe_exemplar set exe_valor=29.99 where exe_id=1;
 update exe_exemplar set exe_idioma='Inglês' where exe_id=1;
+update exe_exemplar set exe_valor=0 where exe_id=1;
 
 --select * from exe_exemplar;
 --select * from ofe_oferta;

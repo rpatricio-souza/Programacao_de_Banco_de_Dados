@@ -87,6 +87,7 @@ create table exe_exemplar(
     constraint exe_pk primary key(liv_isbn, exe_id)
 );
 --drop table exe_exemplar;
+alter table exe_exemplar add constraint exe_chk check(exe_valor>0.0);
 
 --Sequencia para colocar ids nos exemplares
 create sequence exe_id_seq
