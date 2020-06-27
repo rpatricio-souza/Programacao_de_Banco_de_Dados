@@ -106,5 +106,6 @@ create table ofe_oferta(
 
 --View criada para visualizar os exemplares relacionados as vendas
 create view exv_exemplar_vendido as
-select ven_id, exe_id
-from exe_exemplar join ven_venda using(ven_id);
+select ven_id "No. pedido", exe_id "Cód. Livro", liv_nome "Título"
+from liv_livro join exe_exemplar using(liv_isbn) join ven_venda using(ven_id);
+--drop view exv_exemplar_vendido;
