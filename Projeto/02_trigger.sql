@@ -53,14 +53,3 @@ begin
     end if;
 end exemplar_ja_vendido;
 /
-
-
---Deleta na tabela pes_pessoa, uma pessoa excluida na tabela de cli_cliente
-create or replace trigger deleta_cliente_pessoa
-after delete on cli_cliente
-for each row
-
-begin
-    delete from pes_pessoa where pes_cpf=:old.cli_cpf;
-end deleta_pessoa;
-/

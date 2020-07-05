@@ -4,7 +4,7 @@ create table pes_pessoa(
     pes_tel_res varchar2(15),
     pes_tel_cel varchar2(15),
     pes_tel_com varchar2(15),
-    pes_email varchar2(30) constraint pes_uk unique
+    pes_email varchar2(50) constraint pes_uk unique
 );
 
 
@@ -26,7 +26,7 @@ create table fun_funcionario(
 create table aut_autor(
     aut_id integer constraint aut_pk primary key,
     aut_nome varchar2(50) not null,
-    aut_nacionalidade varchar2(20)
+    aut_nacionalidade varchar2(50)
 );
 
 --Sequencia para colocar ids nos autores
@@ -36,9 +36,9 @@ increment by 1;
 
 create table liv_livro(
     liv_isbn number(15) constraint liv_pk primary key,
-    liv_nome varchar2(30) not null,
+    liv_nome varchar2(50) not null,
     liv_genero varchar2(20),
-    liv_editora varchar2(30),
+    liv_editora varchar2(50),
     liv_ano_edicao integer,
     liv_num_edicao integer
 );
@@ -53,8 +53,8 @@ create table atr_autoria(
 
 create table for_fornecedor(
     for_id integer constraint for_pk primary key,
-    for_nome varchar2(30) not null,
-    for_empresa varchar2(30)
+    for_nome varchar2(50) not null,
+    for_empresa varchar2(50)
 );
 
 --Sequencia para colocar ids nos fornecedores
@@ -79,7 +79,7 @@ create table exe_exemplar(
     exe_id integer,
     exe_paginas integer,
     exe_idioma varchar2(30),
-    exe_pais varchar2(30),
+    exe_pais varchar2(50),
     exe_acabamento varchar2(30),
     exe_valor number(6,2),
     for_id integer constraint exe_for_fk references for_fornecedor(for_id),
