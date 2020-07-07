@@ -267,5 +267,5 @@ INSERT INTO exe_exemplar (liv_isbn,exe_id,exe_paginas,exe_idioma,exe_pais,exe_ac
 --select * from ofe_oferta;
 --select * from exv_exemplar_vendido order by "No. pedido";
 
-update exe_exemplar set exe_valor=20.90 where exe_id=30;
-update exe_exemplar set exe_valor=59.99 where exe_id=30;
+update exe_exemplar set exe_valor=25.25 where exe_id=30;
+update exe_exemplar set exe_valor=52.77 where exe_id=30;
